@@ -22,6 +22,8 @@
   
   --ff-base: 'Inter', sans-serif;
   --tittle: 700 1.5rem/2rem var(--ff-base);
+
+  background-color: var(--background-primary);
 }
 
 #page {

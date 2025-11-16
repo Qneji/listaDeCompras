@@ -3,3 +3,41 @@ main {
   flex-direction: column;
   align-items: flex-start;
 }
+
+#box-input {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2.75rem 0 2.5rem 0;
+
+  width: 100%;
+  height: 2.75rem;
+}
+
+input[type="text"] {
+  border: none;
+  width: 100%;
+  padding: 0.70rem 1.125rem;
+  color: var(--content-tertiary);
+
+  border: 2px solid;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: var(--border-primary);
+  box-shadow: inset 0 2px 4px var(--border-primary);
+}
+
+#box-input button {
+  background-color: var(--color-brand);
+  width: 10rem;
+  color: var(--always-white);
+}
+
+#box-input button:hover {
+  background-color: var(--color-brand-hover);
+  width: 10rem;
+  color: var(--always-white);
+}
