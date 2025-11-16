@@ -13,53 +13,58 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <img src="./assets/logo.png" alt="Logo da quicklist">
-    <div>
-      <a href="#">voltar</a>
-      <h1>Compras da semana</h1>
-    </div>
-  </header>
+  <div id="page">
+    <header>
+      <img id="logo" src="./assets/logo.png" alt="Logo da quicklist">
+      <div id="cabeçalho">
+        <a href="#"> 
+          <img src="./assets/icons/arrow-left.svg" alt="">
+          voltar
+        </a>
+        <h1>Compras da semana</h1>
+      </div>
+    </header>
 
-  <main>
-    <div>
-      <input type="text" name="newItem" id="newItem">
-      <button>Adicionar item</button>
-    </div>
+    <main>
+      <div>
+        <input type="text" name="newItem" id="newItem">
+        <button>Adicionar item</button>
+      </div>
 
-    <ul id="list">
-      <li>
-        <label for="item1">
-          <input type="checkbox" name="item1" value="tarefa1">
-          Pão de forma
-          <button><img src="./assets/icons/lixeira.svg" for="item1"></button>
-        </label>
-      </li>
-      <li>
-        <label for="item2">
-          <input type="checkbox" name="item2" value="tarefa2">
-          Café preto
-          <button><img src="./assets/icons/lixeira.svg" for="item2"></button>
-        </label>
-      </li>
-      <li>
-        <label for="item3">
-          <input type="checkbox" name="item3" value="tarefa3">
-          Suco de laranja
-          <button><img src="./assets/icons/lixeira.svg" for="item3"></button>
-        </label>
-      </li>
-      <li>
-        <label for="item4">
-          <input type="checkbox" name="item4" value="tarefa4">
-          Bolacha
-          <button><img src="./assets/icons/lixeira.svg" for="item4"></button>
-        </label>
-      </li>
-    </ul>
-  </main>
+      <ul id="list">
+        <li>
+          <label for="item1">
+            <input type="checkbox" name="item1" value="tarefa1">
+            Pão de forma
+            <button><img src="./assets/icons/lixeira.svg" for="item1"></button>
+          </label>
+        </li>
+        <li>
+          <label for="item2">
+            <input type="checkbox" name="item2" value="tarefa2">
+            Café preto
+            <button><img src="./assets/icons/lixeira.svg" for="item2"></button>
+          </label>
+        </li>
+        <li>
+          <label for="item3">
+            <input type="checkbox" name="item3" value="tarefa3">
+            Suco de laranja
+            <button><img src="./assets/icons/lixeira.svg" for="item3"></button>
+          </label>
+        </li>
+        <li>
+          <label for="item4">
+            <input type="checkbox" name="item4" value="tarefa4">
+            Bolacha
+            <button><img src="./assets/icons/lixeira.svg" for="item4"></button>
+          </label>
+        </li>
+      </ul>
+    </main>
 
-  <footer></footer>
+    <footer></footer>
+  </div>
   <script src="./script.js"></script>
 </body>
 </html>

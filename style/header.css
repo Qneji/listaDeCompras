@@ -1,0 +1,22 @@
+#logo {
+  text-align: center;
+  padding-top: 1.5rem;
+  margin-bottom: 3.875rem;
+}
+
+header a, h1 {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  color: var(--color-brand);
+}
+
+h1 {
+  font: var(--tittle);
+  color: var(--content-primary);
+}
