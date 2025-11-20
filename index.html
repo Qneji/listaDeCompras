@@ -19,7 +19,7 @@
       <div id="cabeçalho">
         <a href="#"> 
           <img src="./assets/icons/arrow-left.svg" alt="">
-          voltar
+          <span>voltar</span>
         </a>
         <h1>Compras da semana</h1>
       </div>
@@ -33,37 +33,49 @@
 
       <ul id="list">
         <li>
-          <label for="item1">
-            <input type="checkbox" name="item1" value="tarefa1">
-            Pão de forma
-            <button><img src="./assets/icons/lixeira.svg" for="item1"></button>
+          <label class="checkbox-label">
+            <input type="checkbox" name="item1" class="check-oculto">
+            <span class="check-customizado"></span>
+            <span>Pão de forma</span>
           </label>
+          <button class="lixeira" for="item1"></button>
         </li>
         <li>
-          <label for="item2">
-            <input type="checkbox" name="item2" value="tarefa2">
-            Café preto
-            <button><img src="./assets/icons/lixeira.svg" for="item2"></button>
+          <label class="checkbox-label">
+            <input type="checkbox" name="item2" class="check-oculto">
+            <span class="check-customizado"></span>
+            <span>Café preto</span>
           </label>
+          <button class="lixeira" for="item2"></button>
         </li>
         <li>
-          <label for="item3">
-            <input type="checkbox" name="item3" value="tarefa3">
-            Suco de laranja
-            <button><img src="./assets/icons/lixeira.svg" for="item3"></button>
+          <label class="checkbox-label">
+            <input type="checkbox" name="item3" class="check-oculto">
+            <span class="check-customizado"></span>
+            <span>Suco de laranja</span>
           </label>
+          <button class="lixeira" for="item3"></button>
         </li>
         <li>
-          <label for="item4">
-            <input type="checkbox" name="item4" value="tarefa4">
-            Bolacha
-            <button><img src="./assets/icons/lixeira.svg" for="item4"></button>
+          <label class="checkbox-label">
+            <input type="checkbox" name="item4" class="check-oculto">
+            <span class="check-customizado"></span>
+            <span>Bolacha</span>
           </label>
+          <button class="lixeira" for="item4"></button>
         </li>
       </ul>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div id="alert">
+        <img src="./assets/icons/warning-circle-filled.svg" alt="">
+        <span>O item foi removido da lista</span>
+        <button>
+          <img src="./assets/icons/delete.svg" alt="">
+        </button>
+      </div>
+    </footer>
   </div>
   <script src="./script.js"></script>
 </body>
