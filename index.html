@@ -1,82 +1,90 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>quicklist</title>
-  <link rel="icon" type="image/icon.png" href="/./assets/icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>quicklist</title>
+    <link rel="icon" type="image/icon.png" href="/./assets/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-  <link rel="stylesheet" href="./style/index.css">
-  
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div id="page">
-    <header>
-      <img id="logo" src="./assets/logo.png" alt="Logo da quicklist">
-      <div id="cabeçalho">
-        <a href="#"> 
-          <img src="./assets/icons/arrow-left.svg" alt="">
-          <span>voltar</span>
-        </a>
-        <h1>Compras da semana</h1>
-      </div>
-    </header>
+    <link rel="stylesheet" href="./style/index.css" />
 
-    <main>
-      <div id="box-input">
-        <input type="text" name="newItem" id="newItem" placeholder="Adicione um novo item">
-        <button>Adicionar item</button>
-      </div>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="page">
+      <header>
+        <img id="logo" src="./assets/logo.png" alt="Logo da quicklist" />
+        <div id="cabeçalho">
+          <a href="#">
+            <img src="./assets/icons/arrow-left.svg" alt="" />
+            <span>voltar</span>
+          </a>
+          <h1>Compras da semana</h1>
+        </div>
+      </header>
 
-      <ul id="list">
-        <li>
-          <label class="checkbox-label">
-            <input type="checkbox" name="item1" class="check-oculto">
-            <span class="check-customizado"></span>
-            <span>Pão de forma</span>
-          </label>
-          <button class="lixeira" for="item1"></button>
-        </li>
-        <li>
-          <label class="checkbox-label">
-            <input type="checkbox" name="item2" class="check-oculto">
-            <span class="check-customizado"></span>
-            <span>Café preto</span>
-          </label>
-          <button class="lixeira" for="item2"></button>
-        </li>
-        <li>
-          <label class="checkbox-label">
-            <input type="checkbox" name="item3" class="check-oculto">
-            <span class="check-customizado"></span>
-            <span>Suco de laranja</span>
-          </label>
-          <button class="lixeira" for="item3"></button>
-        </li>
-        <li>
-          <label class="checkbox-label">
-            <input type="checkbox" name="item4" class="check-oculto">
-            <span class="check-customizado"></span>
-            <span>Bolacha</span>
-          </label>
-          <button class="lixeira" for="item4"></button>
-        </li>
-      </ul>
-    </main>
+      <main>
+        <div id="box-input">
+          <input
+            type="text"
+            name="newItem"
+            id="newItem"
+            placeholder="Adicione um novo item"
+          />
+          <button id="addItem" onclick="adicionarTarefa()">Adicionar item</button>
+        </div>
 
-    <footer>
-      <div id="alert">
-        <img src="./assets/icons/warning-circle-filled.svg" alt="">
-        <span>O item foi removido da lista</span>
-        <button>
-          <img src="./assets/icons/delete.svg" alt="">
-        </button>
-      </div>
-    </footer>
-  </div>
-  <script src="./script.js"></script>
-</body>
+        <ul id="list">
+          <li>
+            <label class="checkbox-label">
+              <input type="checkbox" class="check-oculto" />
+              <span class="check-customizado"></span>
+              <span>Pão de forma</span>
+            </label>
+            <button class="lixeira"></button>
+          </li>
+          <li>
+            <label class="checkbox-label">
+              <input type="checkbox" class="check-oculto" />
+              <span class="check-customizado"></span>
+              <span>Café preto</span>
+            </label>
+            <button class="lixeira"></button>
+          </li>
+          <li>
+            <label class="checkbox-label">
+              <input type="checkbox" class="check-oculto" />
+              <span class="check-customizado"></span>
+              <span>Suco de laranja</span>
+            </label>
+            <button class="lixeira"></button>
+          </li>
+          <li>
+            <label class="checkbox-label">
+              <input type="checkbox" class="check-oculto" />
+              <span class="check-customizado"></span>
+              <span>Bolacha</span>
+            </label>
+            <button class="lixeira"></button>
+          </li>
+        </ul>
+      </main>
+
+      <footer>
+        <div id="alert">
+          <img src="./assets/icons/warning-circle-filled.svg" alt="" />
+          <span id="teste">O item foi removido da lista</span>
+          <button>
+            <img src="./assets/icons/delete.svg" alt="" />
+          </button>
+        </div>
+      </footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>

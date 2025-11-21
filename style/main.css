@@ -92,7 +92,7 @@ main {
     & .check-oculto {
       /* appearance: none; */ /* Alternativa para ocultar a UI nativa */
       position: absolute; /* Tira ele do fluxo para poder estilizá-lo */
-      opacity: 0;
+      opacity: 1;
       height: 1rem;
       width: 1rem;
 
