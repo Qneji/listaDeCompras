@@ -36,7 +36,7 @@ function renderizarTarefas() {
   listaTarefas.innerHTML = "";
 
 
-  for (i = 0; i < ListaMercado.length; i++) {
+  for (let i = 0; i < ListaMercado.length; i++) {
     
     let novaTarefa = document.createElement("li")
     const labels = document.createElement("label")
@@ -49,11 +49,17 @@ function renderizarTarefas() {
     let spanNewItem = document.createElement("span")
     const butonLixeira = document.createElement("button")
     butonLixeira.classList.add("lixeira")
+    butonLixeira.onclick = () => removerTarefa(i)
     labels.append(inputOculto, spanCustomizado, spanNewItem)
     novaTarefa.append(labels, butonLixeira)
     spanNewItem.textContent = ListaMercado[i] // adicionando o item na lista
     listaTarefas.appendChild(novaTarefa)
   }
+}
+
+function removerTarefa(i) {
+  ListaMercado.splice(i, 1)
+  renderizarTarefas()
 }
 
 renderizarTarefas() // chamando a função para renderizar as tarefas
