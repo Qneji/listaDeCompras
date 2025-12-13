@@ -2,6 +2,9 @@ const newItem = document.getElementById("newItem") // capturando o novo item dig
 const alert = document.getElementById("alert") // capturando o alert de item removido da lista
 const menssagemFooter = document.getElementById("menssagem")
 const imgSpan = document.getElementById("img-span")
+const footerRemove = document.getElementById("footer-remove")
+
+newItem.focus()
 
 let ListaMercado = ["Pão de forma", "Café preto", "Suco de laranja", "Bolacha"]
 
@@ -26,9 +29,14 @@ function adicionarTarefa() {
     ListaMercado.push(item)
     renderizarTarefas()
   }
+
+  setTimeout(() => {
+    alert.style.display = "none"
+  }, 2000)
     
   // 6. Limpa o input
   newItem.value = "" // limpa o input após adicionar algum item.
+  newItem.focus()
 }
 
 function renderizarTarefas() {
@@ -64,7 +72,23 @@ function renderizarTarefas() {
 
 function removerTarefa(i) {
   ListaMercado.splice(i, 1)
+
+  menssagemFooter.textContent = "item removido com sucesso!"
+  alert.style.display = "flex"
+  alert.style.backgroundColor = "var(--color-remove)"
+  imgSpan.src = "./assets/icons/warning-circle-filled.svg"
+
+  setTimeout(() => {
+    alert.style.display = "none"
+  }, 2000)
+
   renderizarTarefas()
 }
+
+alert.addEventListener("click", function (footerRemove) {
+  if (footerRemove.target) {
+    alert.style.display = "none"
+  }
+})
 
 renderizarTarefas() // chamando a função para renderizar as tarefas
