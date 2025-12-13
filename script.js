@@ -46,6 +46,11 @@ function renderizarTarefas() {
     inputOculto.classList.add("check-oculto")
     const spanCustomizado = document.createElement("span")
     spanCustomizado.classList.add("check-customizado")
+    spanCustomizado.addEventListener("click", () => {
+      spanNewItem.classList.toggle('riscado');
+      spanCustomizado.classList.toggle("check-customizado-checked");
+      spanCustomizado.classList.toggle('completo');
+    })
     let spanNewItem = document.createElement("span")
     const butonLixeira = document.createElement("button")
     butonLixeira.classList.add("lixeira")
