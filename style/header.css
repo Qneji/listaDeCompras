@@ -10,6 +10,7 @@ header a, h1 {
 }
 
 a {
+  width: calc(10%);
   text-decoration: none;
   color: inherit;
   color: var(--color-brand);
